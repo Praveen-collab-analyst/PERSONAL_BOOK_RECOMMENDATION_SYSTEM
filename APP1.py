@@ -16,7 +16,7 @@ from surprise import accuracy
 # In[2]:
 
 
-df = pd.read_csv('/Users/nick/Desktop/Dataset (2)/filtered_dataset.csv')
+df = pd.read_csv('filtered_dataset.csv')
 
 
 # In[3]:
