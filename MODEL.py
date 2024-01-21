@@ -64,7 +64,7 @@ if not book_ratings.empty:
     st.subheader("Top 5 Recommended Books:")
 
     for i, prediction in enumerate(sorted_predictions[:5]):
-        book_info = df[df['ISBN'] == prediction.iid][['Book-Title', 'Book-Author']].iloc[0]
+        book_info = df[df['ISBN'] == prediction.iid][['Book-Title', 'Book-Author', 'Image-URL-S']].iloc[0]
         st.write(f"{i + 1}. {book_info['Book-Title']} by {book_info['Book-Author']} (Rating: {prediction.est:.2f})")
 else:
     st.warning("Book not found. Please enter a valid book title.")
