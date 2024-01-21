@@ -63,7 +63,7 @@ if len(input_book_isbn) > 0:
 
     input_book_ratings = sorted(input_book_ratings, key=lambda x: x[1], reverse=True)
 
-    st.subheader("Top 5 Recommended Books:")
+    st.subheader("Top Recommended Books:")
 
     # Display top recommended books
     for i in range(min(1, len(input_book_ratings))):
