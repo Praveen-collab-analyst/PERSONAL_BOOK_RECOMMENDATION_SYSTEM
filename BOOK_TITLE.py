@@ -65,8 +65,8 @@ if len(input_book_isbn) > 0:
 
     st.subheader("Top 5 Recommended Books:")
 
-    # Display top 5 recommended books
-    for i in range(min(5, len(input_book_ratings))):
+    # Display top recommended books
+    for i in range(min(1, len(input_book_ratings))):
         book_id, predicted_rating = input_book_ratings[i]
         book_title = df[df['ISBN'] == trainset.to_raw_iid(book_id)]['Book-Title'].values[0]
         book_author = df[df['ISBN'] == trainset.to_raw_iid(book_id)]['Book-Author'].values[0]
