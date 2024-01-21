@@ -5,6 +5,7 @@ from surprise import Dataset
 from surprise import Reader
 from surprise.model_selection import train_test_split
 from surprise import accuracy
+from sklearn import preprocessing
 
 # Load your dataset
 df = pd.read_csv('filtered_dataset.csv')
