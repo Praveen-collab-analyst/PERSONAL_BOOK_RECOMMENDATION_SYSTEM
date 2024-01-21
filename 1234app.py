@@ -5,12 +5,12 @@ from surprise import Dataset
 from surprise import Reader
 from surprise.model_selection import train_test_split
 from surprise import accuracy
+pip install -U scikit-learn
 from sklearn import preprocessing
 
 # Load your dataset
 df = pd.read_csv('filtered_dataset.csv')
 
-# ... (Perform necessary data preprocessing as in the previous code)
 
 # Create an object of label encoder
 le = preprocessing.LabelEncoder()
