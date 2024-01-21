@@ -6,14 +6,10 @@ from surprise import SVD
 from surprise import Dataset
 from surprise import Reader
 from surprise.model_selection import train_test_split
-from sklearn import preprocessing
 
 # Load your dataset
 df = pd.read_csv('filtered_dataset.csv')
 
-# Create an object of label encoder
-le = preprocessing.LabelEncoder()
-le.fit(df['Book-Title'].unique())
 
 def smooth_user_preference(x):
     return math.log(1 + x, 2)
