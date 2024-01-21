@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 from surprise import SVD
+from surprise import Dataset
+from surprise import Reader
 from surprise.model_selection import train_test_split
-from sklearn import preprocessing
-import random
-import math
+from surprise import accuracy
 
 # Load your dataset
 df = pd.read_csv('filtered_dataset.csv')
