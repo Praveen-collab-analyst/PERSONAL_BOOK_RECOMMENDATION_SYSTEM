@@ -52,7 +52,8 @@ if st.button('Get Recommendations'):
     except ValueError:
         st.error('Invalid Book ISBN. Please enter a valid ISBN.')
 
-
+st.sidebar.subheader('Model Evaluation')
+st.sidebar.text(f'RMSE: {rmse:.4f}')
 
 
 # Optionally, you can display other information from the dataset in the main content or sidebar.
