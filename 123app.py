@@ -12,7 +12,7 @@ from surprise import Reader
 from surprise.model_selection import train_test_split
 from surprise import accuracy
 
-df = pd.read_csv('/Users/nick/Desktop/Dataset (2)/filtered_dataset.csv')
+df = pd.read_csv('filtered_dataset.csv')
 
 reader = Reader(rating_scale=(1, 10))
 data = Dataset.load_from_df(df[['User-ID', 'ISBN', 'Book-Rating']], reader)
