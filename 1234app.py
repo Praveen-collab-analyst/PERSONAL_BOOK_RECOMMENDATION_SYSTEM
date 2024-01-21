@@ -1,22 +1,22 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import math  
 from surprise import SVD
 from surprise import Dataset
 from surprise import Reader
 from surprise.model_selection import train_test_split
-from surprise import accuracy
 from sklearn import preprocessing
 
 # Load your dataset
 df = pd.read_csv('filtered_dataset.csv')
-
 
 # Create an object of label encoder
 le = preprocessing.LabelEncoder()
 le.fit(df['Book-Title'].unique())
 
 def smooth_user_preference(x):
-    return math.log(1+x, 2)
+    return math.log(1 + x, 2)
 
 ratings_full_df = df.groupby(['Book-Title', 'User-ID'])['Book-Rating'].sum().apply(smooth_user_preference).reset_index()
 
@@ -80,5 +80,3 @@ if st.button('Get Recommendations'):
 
     except ValueError:
         st.error('Invalid Book Title. Please enter a valid title.')
-
-# Optionally, you can display other information in the sidebar or main content as needed
