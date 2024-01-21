@@ -55,7 +55,7 @@ st.title('Book Recommendation System')
 # In[14]:
 
 
-book_isbn = st.text_input('Enter a book ISBN to get recommendations:', '0316666343')
+book_isbn = st.text_input('Enter a book ISBN to get recommendations:', '316666343')
 
 
 # In[12]:
