@@ -52,3 +52,12 @@ if st.button('Get Recommendations'):
     except ValueError:
         st.error('Invalid Book ISBN. Please enter a valid ISBN.')
 
+
+
+
+# Optionally, you can display other information from the dataset in the main content or sidebar.
+# Example: Display unique book titles in the sidebar
+st.sidebar.subheader('Unique Book Titles')
+unique_titles = df['Book-Title'].unique()
+st.sidebar.write(unique_titles[:10]) 
+
