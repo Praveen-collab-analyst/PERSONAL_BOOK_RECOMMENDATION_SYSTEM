@@ -23,6 +23,10 @@ trainset, testset = train_test_split(data, test_size=0.2, random_state=42)
 model = SVD()
 model.fit(trainset)
 
+# Calculate RMSE
+predictions = model.test(testset)
+rmse = accuracy.rmse(predictions)
+
 # Streamlit App
 st.title('Book Recommendation System')
 
