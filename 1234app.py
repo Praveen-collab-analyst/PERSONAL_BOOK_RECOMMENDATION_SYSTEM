@@ -63,8 +63,6 @@ book_title = st.text_input('Enter a book title to get recommendations:', 'The Da
 # Get recommendations for the entered book title
 if st.button('Get Recommendations'):
     try:
-        # Convert book title to label encoding
-        book_title_encoded = le.transform([book_title])[0]
 
         # Get recommendations
         recommendations = cf_recommender_model.recommend_items(user_id=1, items_to_ignore=[], topn=5, verbose=True)
