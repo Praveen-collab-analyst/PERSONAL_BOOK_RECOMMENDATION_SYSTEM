@@ -70,7 +70,6 @@ if len(input_book_isbn) > 0:
         book_id, predicted_rating = input_book_ratings[i]
         book_title = df[df['ISBN'] == trainset.to_raw_iid(book_id)]['Book-Title'].values[0]
         book_author = df[df['ISBN'] == trainset.to_raw_iid(book_id)]['Book-Author'].values[0]
-        book_author = df[df['ISBN'] == trainset.to_raw_iid(book_id)]['Image-URL-S'].values[0]
         st.write(f"{i + 1}. {book_title} by {book_author} (Predicted Rating: {predicted_rating:.2f})")
 
 else:
